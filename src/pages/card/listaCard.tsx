@@ -1,43 +1,60 @@
 import React from 'react';
 import Link from 'next/link'
-import {GetStaticProps} from 'next'
+import { GetStaticProps } from 'next'
 
-export default function Home({ games, title}){
+import SelectInput from '../../components/Selectinput'
 
-const isName = game => game.name === 'Sylmara';
-const isNames = games.filter(isName);
+export default function Home({ games, title }) {
 
-console.log(isNames)
+    const isName = game => game.name === 'Sylmara';
+    const isNames = games.filter(isName);
 
-    return(
-        
+    const Nomes = games.map((c, i) => (
+        c.data
+    ));
+
+    const options = [
+        { value: 'Diogo Silva', label: 'Diogo SIlva' },
+        { value: 'Davi Lucca', label: 'Davi Lucca' },
+        { value: 'Gabrielly Silva', label: 'Gabrielly Silva' }
+    ];
+
+    console.log(Nomes)
+
+    return (
+
         <main>
-   
+
             <h1>🎮 Top Jogos Da Vida - Diogo 🎮  </h1>
-             
+
             <nav>
                 <Link href="/">
-                <a>Home</a>
+                    <a>Home</a>
                 </Link>{' '}
                 |{' '}
                 <Link href="/card/listaCard">
-                <a>Lita de Jogos</a>
+                    <a>Lita de Jogos</a>
                 </Link>{' '}
                 |{' '}
                 <Link href="/Cards/cards">
-                <a>Reletório Geral</a>
+                    <a>Reletório Geral</a>
                 </Link>{' '}
                 |{' '}
                 <Link href="/card/listaNomes">
-                <a>Lista Nomes</a>
+                    <a>Lista Nomes</a>
                 </Link>
             </nav>
 
+            <SelectInput  //>> filtro mês header Content
+                options={Nomes}
+            />
+
+
             <ol>
-                {isNames.map((g,i) => {
-                    
+                {isNames.map((g, i) => {
+
                     const position = i + 1;
-                    const medals = ["🥇","🥈","🥉","🥉"]
+                    const medals = ["🥇", "🥈", "🥉", "🥉"]
 
                     return (
                         <li key={g.name}>
@@ -52,8 +69,8 @@ console.log(isNames)
                                     {g.name}
                                 </span>
                             </span>
-                            
-                            <img src={g.image} alt={`Capa de ${g.name}`}/>
+
+                            <img src={g.image} alt={`Capa de ${g.name}`} />
                         </li>
                     )
                 })}
@@ -62,21 +79,21 @@ console.log(isNames)
     )
 }
 
-export async function getStaticProps(){
-  
-    const { games,title } = await fetch('http://localhost:3000/api/dbApi/dbGames')
-      
-    .then(res => {
-        if(res.ok) return res.json()
-      })
-      .then(resObjPromise => resObjPromise)
-      
+export async function getStaticProps() {
+
+    const { games, title } = await fetch('https://ideia-unica-pi-sepia.vercel.app/api/db')
+
+        .then(res => {
+            if (res.ok) return res.json()
+        })
+        .then(resObjPromise => resObjPromise)
+
     return {
-      props:{
-        games,
-        title,
-      },
-      revalidate: 10
+        props: {
+            games,
+            title,
+        },
+        revalidate: 10
     }
-  }
-  
+}
+

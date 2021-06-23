@@ -1,6 +1,30 @@
+import {GetStaticProps} from 'next'
+import React from 'react'
 import Link from 'next/link'
 
-const ListaHome = (props) => (
+//Tipagens
+type ListaConsultoresAuto ={  
+  id: string,
+  consultor: string,
+  carteirizadas: string,
+  VA: string,
+  VR: string,
+  PC: string,
+  VRobjetivo: string,
+  PCobjetivo: string,
+  MetaDia: string,
+  data: string,
+}
+
+type dbMetricasConsultoresAutoProps = {
+  dbMetricasConsultoresAuto: ListaConsultoresAuto[];
+}
+
+type Title = {
+  title: string;
+}
+
+const ListaHome = (props: Title) => (
   <div>
     <h1>Titulo Banco de dados</h1>
     <p>
@@ -29,22 +53,23 @@ const ListaHome = (props) => (
 )
 
 //conexao com a planilha
-export async function getServerSideProps(){
+export const getStaticProps: GetStaticProps = async () =>{
   
-      const { temploe2e,title } = await fetch('http://localhost:3000/api/dbApi/db')
-        
-      .then(res => {
-          if(res.ok) return res.json()
-        })
-        .then(resObjPromise => resObjPromise)
-        
-      return {
-        props:{
-          temploe2e,
-          title
-        }
-      }
-    }
+  const { dbMetricasConsultoresAuto,title } = await fetch('http://localhost:3000/api/dbApi/db')
+    
+  .then(res => {
+      if(res.ok) return res.json()
+    })
+    .then(resObjPromise => resObjPromise)
+    
+  return {
+    props:{
+      dbMetricasConsultoresAuto,
+      title
+    },
+    revalidate: 10
+  }
+}
 
 export default ListaHome
 

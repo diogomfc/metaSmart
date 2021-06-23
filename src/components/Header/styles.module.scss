@@ -23,3 +23,28 @@
         text-transform: capitalize;
     }
 }
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    
+    margin-bottom: 25px;
+}
+
+.titlecontainer{
+    h1{
+        color: var(--gray-40);
+
+        &::after{
+            content: '';
+            display:block;
+            width: 55px;
+            border-bottom: 10px solid var(--gray-40);
+        } 
+    }
+}
+
+.controllers{
+    display:flex;
+}
