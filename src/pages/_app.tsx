@@ -9,14 +9,14 @@ import styles from '../styles/app.module.scss';
 import Header from '../components/Header';
 
 
-function MyApp({ Component, pageProps}) {
-  return(
+function MyApp({ Component, pageProps }) {
+  return (
     <div className={styles.wrapper}>
       <main>
-        <Header title="Pagina 1"/>
+        <Header title="Página Geral" />
         <Component {...pageProps} />
       </main>
-   </div>
+    </div>
   )
 }
 

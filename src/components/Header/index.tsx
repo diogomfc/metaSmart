@@ -6,19 +6,19 @@ import ptBR from 'date-fns/locale/pt-BR'
 import styles from './styles.module.scss';
 interface IContentHeaderProps {
     title: string;
-    
- }
 
- const Header: React.FC  <IContentHeaderProps> = ({
+}
+
+const Header: React.FC<IContentHeaderProps> = ({
     title,
 }) => {
     return (
         <div className={styles.container} >
-            <div className={styles.titlecontainer}> 
-               <h1>{title}</h1>
+            <div className={styles.titlecontainer}>
+                <h1>{title}</h1>
             </div>
             <div className={styles.controllers} >
-               <span>Teste 01</span>
+                <span>Teste 01</span>
             </div>
         </div>
     );
