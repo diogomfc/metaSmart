@@ -1,9 +1,9 @@
-import {GetStaticProps} from 'next'
+import { GetStaticProps } from 'next'
 import React from 'react'
 import Link from 'next/link'
 
 //Tipagens
-type ListaConsultoresAuto ={  
+type ListaConsultoresAuto = {
   id: string,
   consultor: string,
   carteirizadas: string,
@@ -30,40 +30,40 @@ const ListaHome = (props: Title) => (
     <p>
       {props.title}
     </p>
-    
+
     <nav>
-        <Link href="/">
-          <a>Home</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/card/listaCard">
+      <Link href="/">
+        <a>Home</a>
+      </Link>{' '}
+      |{' '}
+      <Link href="/card/listaCard">
         <a>Lita de Jogos</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/Cards/cards">
-          <a>Reletório Geral</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/card/listaNomes">
+      </Link>{' '}
+      |{' '}
+      <Link href="/Cards/cards">
+        <a>Reletório Geral</a>
+      </Link>{' '}
+      |{' '}
+      <Link href="/card/listaNomes">
         <a>Lista Nomes</a>
-        </Link>
-      </nav>
-   
+      </Link>
+    </nav>
+
   </div>
 )
 
 //conexao com a planilha
-export const getStaticProps: GetStaticProps = async () =>{
-  
-  const { dbMetricasConsultoresAuto,title } = await fetch('http://localhost:3000/api/dbApi/db')
-    
-  .then(res => {
-      if(res.ok) return res.json()
+export const getStaticProps: GetStaticProps = async () => {
+
+  const { dbMetricasConsultoresAuto, title } = await fetch('https://ideia-unica-pi-sepia.vercel.app/api/db1')
+
+    .then(res => {
+      if (res.ok) return res.json()
     })
     .then(resObjPromise => resObjPromise)
-    
+
   return {
-    props:{
+    props: {
       dbMetricasConsultoresAuto,
       title
     },
