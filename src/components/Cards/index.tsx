@@ -1,8 +1,6 @@
 import { GetStaticProps } from "next";
 import React from "react";
 
-import Layout from "../../components/Layout";
-
 import {
   Container,
   ContainerPuxadasCarterizadas,
@@ -143,7 +141,7 @@ function Cards(props: IdbMetricasConsultoresAutoProps) {
   ));
 
   return (
-    <Layout>
+    <>
       <ContainerGeral>{MetricaDiaConsultores}</ContainerGeral>
       <ContainerGeral>{MetricaDiaConsultores}</ContainerGeral>
       <ContainerGeral>{MetricaDiaConsultores}</ContainerGeral>
@@ -152,7 +150,7 @@ function Cards(props: IdbMetricasConsultoresAutoProps) {
       <ContainerGeral>{MetricaDiaConsultores}</ContainerGeral>
       <ContainerGeral>{MetricaDiaConsultores}</ContainerGeral>
       <ContainerGeral>{MetricaDiaConsultores}</ContainerGeral>
-    </Layout>
+    </>
   );
 }
 
