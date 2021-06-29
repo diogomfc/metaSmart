@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/pages/Header1/index.tsxx.tsx", "src/pages/index.tsx", "src/pages/_document.tsrc/pages/_app.jspp.tsx", "src/pages/Cards/styles.js"  ],
+, "src/pages/Header1/index.tsxx.tsx", "src/pages/index.tsx", "src/pages/_document.tsrc/pages/_app.jspp.tsx"],
   "exclude": [
     "node_modules"
   ]
