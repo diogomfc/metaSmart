@@ -1,13 +1,11 @@
-
-import React from 'react'
+import React from "react";
 
 //styles global
-import '../styles/global.scss';
-import styles from '../styles/app.module.scss';
+import "../styles/global.scss";
+import styles from "../styles/app.module.scss";
 
 //Componetes
-import Header from '../components/Header';
-
+import Header from "../components/Header";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -17,12 +15,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </main>
     </div>
-  )
+  );
 }
 
-export default MyApp
-
-
-
-
-
+export default Header;
