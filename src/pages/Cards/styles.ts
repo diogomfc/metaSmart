@@ -8,7 +8,7 @@ export const ContainerGeral= styled.div`
     justify-content: center;
 `
 
-const animate = keyframes`
+export const animate = keyframes`
     0%{
         transform: translateX(100px);
         opacity: 0;
@@ -109,6 +109,7 @@ export const Container = styled.div`
         }
     }
 }
+
 .statusNegativoCards{
     display: flex;
     justify-content: center;
@@ -177,7 +178,7 @@ export const Container = styled.div`
             display: flex;
             
             strong {
-                position: initial;        
+                position: initial;
                 width: auto;
                 font-size: 22px;
             }
@@ -185,7 +186,7 @@ export const Container = styled.div`
             strong:after {
                 display: inline-block;
                 content: '';
-                width: 1px;                
+                width: 1px;
             }
         }
     }
@@ -363,7 +364,6 @@ export const ContainerPuxadasCarterizadas = styled.div`
     }
 }
 `;
-
 
 export const OptionsContainer = styled.div`
     width: 10%;
