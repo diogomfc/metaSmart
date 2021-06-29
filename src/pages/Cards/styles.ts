@@ -1,6 +1,6 @@
 import styled, {keyframes} from 'styled-components';
 
-export const ContainerGeral= styled.div`
+export const ContainerGeral = styled.div`
     display:flex;
     width:100%;
     height:100%;
@@ -18,7 +18,7 @@ const animate = keyframes`
     100%{
         transform: translateX(0px);
         opacity: 1;
-    }
+    };
 `;
 
 export const Container = styled.div`
@@ -107,7 +107,7 @@ export const Container = styled.div`
             }
         }
     }
-}
+};
 
 .statusNegativoCards{
     display: flex;
@@ -134,7 +134,7 @@ export const Container = styled.div`
       color: #f23947;
       top: 0;
       bottom: 0;
-    }
+    };
     
     > span {
         top:5px;
@@ -142,21 +142,19 @@ export const Container = styled.div`
         font-size: 12px;
         font-weight: 500;
         position: absolute;
-    }
+    };
 
     > small {
         color: #fff;
         font-size: 10px;
         position: absolute;
         bottom: 10px;
-    }
-
-
+    };
 
     @media(max-width: 770px){
         > span {
             font-size: 14px;
-        }
+        };
 
         > h1 {
             word-wrap: break-word;
@@ -166,9 +164,9 @@ export const Container = styled.div`
                 display: inline-block;
                 width: 100%;
                 font-size: 16px;
-            }
-        }
-    }
+            };
+        };
+    };
 
     @media(max-width: 420px){
         width: 100%;
@@ -180,16 +178,16 @@ export const Container = styled.div`
                 position: initial;
                 width: auto;
                 font-size: 22px;
-            }
+            };
 
             strong:after {
                 display: inline-block;
                 content: '';
                 width: 1px;
-            }
-        }
-    }
-}
+            };
+        };
+    };
+};
 `;
 
 export const ContainerPuxadasCarterizadas = styled.div`
@@ -209,7 +207,6 @@ export const ContainerPuxadasCarterizadas = styled.div`
     background-color: #353a49;
    
     border: 1px solid #7584A6;
-    //box-shadow: 0px 0px 5px 0px #7584A6;
     border-radius: 7px;
 
     position: relative;
@@ -225,7 +222,7 @@ export const ContainerPuxadasCarterizadas = styled.div`
       color: #7584A6;
       top: 0;
       bottom: 0;
-    }
+    };
     
     > span {
         top:5px;
@@ -233,21 +230,19 @@ export const ContainerPuxadasCarterizadas = styled.div`
         font-size: 12px;
         font-weight: 500;
         position: absolute;
-    }
+    };
 
     > small {
         color: #7584A6;
         font-size: 10px;
         position: absolute;
         bottom: 10px;
-    }
-
-
+    };
 
     @media(max-width: 770px){
         > span {
             font-size: 14px;
-        }
+        };
 
         > h1 {
             word-wrap: break-word;
@@ -257,9 +252,9 @@ export const ContainerPuxadasCarterizadas = styled.div`
                 display: inline-block;
                 width: 100%;
                 font-size: 16px;
-            }
-        }
-    }
+            };
+        };
+    };
 
     @media(max-width: 420px){
         width: 100%;
@@ -268,19 +263,19 @@ export const ContainerPuxadasCarterizadas = styled.div`
             display: flex;
             
             strong {
-                position: initial;        
+                position: initial;
                 width: auto;
                 font-size: 22px;
-            }
+            };
 
             strong:after {
                 display: inline-block;
                 content: '';
-                width: 1px;                
-            }
-        }
-    }
-}
+                width: 1px;
+            };
+        };
+    };
+};
 .statusNegativoCards1{
     display: flex;
     justify-content: center;
@@ -306,7 +301,7 @@ export const ContainerPuxadasCarterizadas = styled.div`
       color: #f23947;
       top: 0;
       bottom: 0;
-    }
+    };
     
     > span {
         top:5px;
@@ -314,21 +309,19 @@ export const ContainerPuxadasCarterizadas = styled.div`
         font-size: 12px;
         font-weight: 500;
         position: absolute;
-    }
+    };
 
     > small {
         color: #fff;
         font-size: 10px;
         position: absolute;
         bottom: 10px;
-    }
-
-
+    };
 
     @media(max-width: 770px){
         > span {
             font-size: 14px;
-        }
+        };
 
         > h1 {
             word-wrap: break-word;
@@ -338,9 +331,9 @@ export const ContainerPuxadasCarterizadas = styled.div`
                 display: inline-block;
                 width: 100%;
                 font-size: 16px;
-            }
-        }
-    }
+            };
+        };
+    };
 
     @media(max-width: 420px){
         width: 100%;
@@ -349,19 +342,19 @@ export const ContainerPuxadasCarterizadas = styled.div`
             display: flex;
             
             strong {
-                position: initial;        
+                position: initial;
                 width: auto;
                 font-size: 22px;
-            }
+            };
 
             strong:after {
                 display: inline-block;
                 content: '';
-                width: 1px;                
-            }
-        }
-    }
-}
+                width: 1px;
+            };
+        };
+    };
+};
 `;
 
 export const OptionsContainer = styled.div`
@@ -381,7 +374,7 @@ export const OptionsContainer = styled.div`
         display: flex; 
 
         animation: ${animate} .5s; 
-    }
+    };
 `;
 export const Avatar = styled.div`
    display: flex;
@@ -391,7 +384,7 @@ export const Avatar = styled.div`
     width: 90px;
     height: 90px;
     border-radius: 50%;
-  }
+  };
 
   .statusAvatarPositivo{
     display: flex;
@@ -409,7 +402,8 @@ export const Avatar = styled.div`
     overflow: hidden;
 
     animation: ${animate} .5s;
-  }
+  };
+
   .statusAvatarNegativo{
     display: flex;
     justify-content: center;
@@ -426,5 +420,5 @@ export const Avatar = styled.div`
     overflow: hidden;
 
     animation: ${animate} .5s;
-  }
+  };
 `;
