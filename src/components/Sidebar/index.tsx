@@ -29,7 +29,7 @@ function Sidebar() {
       </MenuItem>
       <MenuItem>
         <img src="/images/IconMetricasMes.svg"></img>
-        <Link href="/">
+        <Link href="/Cards">
           <span>Métricas mês</span>
         </Link>
       </MenuItem>
