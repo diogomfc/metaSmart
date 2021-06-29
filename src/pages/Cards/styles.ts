@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components';
+import styled from 'styled-components';
 
 
 export const ContainerGeral= styled.div`
@@ -7,20 +7,6 @@ export const ContainerGeral= styled.div`
     height:100%;
     justify-content: center;
 `
-
-export const animate = keyframes`
-    0%{
-        transform: translateX(100px);
-        opacity: 0;
-    }
-    50%{     
-        opacity: .3;
-    }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-`;
 
 export const Container = styled.div`
     width: 15%;
@@ -43,8 +29,6 @@ export const Container = styled.div`
 
     position: relative;
     overflow: hidden;
-
-    animation: ${animate} .5s;
 
     > h1 {
       display: flex;
@@ -124,8 +108,6 @@ export const Container = styled.div`
 
     position: relative;
     overflow: hidden;
-
-    animation: ${animate} .5s;
 
     > h1 {
       display: flex;
@@ -216,8 +198,6 @@ export const ContainerPuxadasCarterizadas = styled.div`
     position: relative;
     overflow: hidden;
 
-    animation: ${animate} .5s;
-
     > h1 {
       display: flex;
       align-items: center;
@@ -296,8 +276,6 @@ export const ContainerPuxadasCarterizadas = styled.div`
 
     position: relative;
     overflow: hidden;
-
-    animation: ${animate} .5s;
 
     > h1 {
       display: flex;
@@ -380,8 +358,6 @@ export const OptionsContainer = styled.div`
         margin-top: -10px;
         color: white;
         display: flex; 
-
-        animation: ${animate} .5s; 
     }
 `;
 export const Avatar = styled.div`
@@ -409,7 +385,6 @@ export const Avatar = styled.div`
     position: relative;
     overflow: hidden;
 
-    animation: ${animate} .5s;
   }
   .statusAvatarNegativo{
     display: flex;
@@ -426,7 +401,6 @@ export const Avatar = styled.div`
     position: relative;
     overflow: hidden;
 
-    animation: ${animate} .5s;
   }
 `;
 
