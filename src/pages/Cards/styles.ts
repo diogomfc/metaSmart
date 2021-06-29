@@ -71,7 +71,7 @@ export const Container = styled.div`
     }
 
 
-    @media(max-width: 770px){
+    /* @media(max-width: 770px){
         > span {
             font-size: 14px;
         }
@@ -86,9 +86,9 @@ export const Container = styled.div`
                 font-size: 16px;
             }
         }
-    }
+    } */
 
-    @media(max-width: 420px){
+    /* @media(max-width: 420px){
         width: 100%;
 
         > h1 {
@@ -106,7 +106,7 @@ export const Container = styled.div`
                 width: 1px;                
             }
         }
-    }
+    } */
 };
 
 .statusNegativoCards{
@@ -239,7 +239,7 @@ export const ContainerPuxadasCarterizadas = styled.div`
         bottom: 10px;
     };
 
-    @media(max-width: 770px){
+    /* @media(max-width: 770px){
         > span {
             font-size: 14px;
         };
@@ -254,9 +254,9 @@ export const ContainerPuxadasCarterizadas = styled.div`
                 font-size: 16px;
             };
         };
-    };
+    }; */
 
-    @media(max-width: 420px){
+    /* @media(max-width: 420px){
         width: 100%;
 
         > h1 {
@@ -274,7 +274,7 @@ export const ContainerPuxadasCarterizadas = styled.div`
                 width: 1px;
             };
         };
-    };
+    }; */
 };
 .statusNegativoCards1{
     display: flex;
@@ -318,7 +318,7 @@ export const ContainerPuxadasCarterizadas = styled.div`
         bottom: 10px;
     };
 
-    @media(max-width: 770px){
+    /* @media(max-width: 770px){
         > span {
             font-size: 14px;
         };
@@ -333,9 +333,9 @@ export const ContainerPuxadasCarterizadas = styled.div`
                 font-size: 16px;
             };
         };
-    };
+    }; */
 
-    @media(max-width: 420px){
+    /* @media(max-width: 420px){
         width: 100%;
 
         > h1 {
@@ -353,7 +353,7 @@ export const ContainerPuxadasCarterizadas = styled.div`
                 width: 1px;
             };
         };
-    };
+    }; */
 };
 `;
 
