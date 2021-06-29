@@ -1,8 +1,6 @@
 import styled, {keyframes} from 'styled-components';
 
-// interface IContainerProps {
-//     color: string;
-// }
+
 export const ContainerGeral= styled.div`
     display:flex;
     width:100%;
@@ -72,7 +70,6 @@ export const Container = styled.div`
         position: absolute;
         bottom: 10px;
     }
-
 
 
     @media(max-width: 770px){
