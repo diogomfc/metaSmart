@@ -17,16 +17,16 @@ export const MenuItem = styled.div`
   align-items: center;
   padding: 0 12px;
   box-sizing: border-box;
-  height: 60px;
+  height: 40px;
   :hover {
     background: #232835;
   }
   > span {
-    font-weight: ${(props) => (props.active ? '700' : '400')};
+    font-weight:200;
     margin-left: 13px;
     font-size: 20px;
     line-height: 60px;
-    color: ${(props) => (props.active ? props.theme.colors.primary : '#E6E6E6')};
+    color: #E6E6E6;
   }
 
   > img {
@@ -43,13 +43,13 @@ export const Following = styled.div`
 `;
 
 export const FollowingHeader = styled.div`
-  font-weight: 400;
-  font-size: 16px;
+  //font-weight: 400;
+  //font-size: 16px;
   line-height: 22px;
   color: rgba(22, 24, 35, 0.5);
-  height: 8px;
+  //height: 8px;
   padding-left: 16px;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
 `;
 
 export const InfoContainer = styled.div`
@@ -72,7 +72,7 @@ export const InfoContainerTime = styled.div`
 `;
 
 export const Links = styled.div`
-  margin-bottom: ${(props) => (props.margin ? '8px' : '0px')};
+  margin-bottom: 5px;
 
   > a {
     cursor: pointer;
