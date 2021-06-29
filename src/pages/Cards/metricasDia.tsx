@@ -8,7 +8,7 @@ import {
   OptionsContainer,
   Avatar,
   ContainerGeral,
-} from "./styles";
+} from "../../styles/stylesCards";
 
 interface IListaConsultoresAuto {
   id: string;

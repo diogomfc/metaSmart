@@ -18,18 +18,18 @@ function Sidebar() {
       <MenuItem>
         <img src="/images/IconDashborard.svg"></img>
         <Link href="/">
-          <span>Dashborard</span>
+          <span>Dashboard</span>
         </Link>
       </MenuItem>
       <MenuItem>
         <img src="/images/IconMetricasDia.svg"></img>
-        <Link href="/metricasDia">
+        <Link href="/Cards/metricasDia">
           <span>Métricas dia</span>
         </Link>
       </MenuItem>
       <MenuItem>
         <img src="/images/IconMetricasMes.svg"></img>
-        <Link href="/Cards">
+        <Link href="/contato">
           <span>Métricas mês</span>
         </Link>
       </MenuItem>

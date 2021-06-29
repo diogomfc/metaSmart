@@ -1,10 +1,10 @@
 import Layout from "../components/Layout";
 import React from "react";
 
-function Index() {
+function Index({ props }) {
   return (
     <Layout>
-      <h1>CARDS</h1>
+      <h1>Contato</h1>
     </Layout>
   );
 }

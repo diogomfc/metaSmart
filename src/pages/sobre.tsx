@@ -1,9 +1,9 @@
-import Layout from '../components/Layout';
+import Layout from "../components/Layout";
 
 function Index({ posts }) {
   return (
     <Layout>
-      SOBRE
+      <h1>Contato</h1>
     </Layout>
   );
 }

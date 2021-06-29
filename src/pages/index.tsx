@@ -1,4 +1,4 @@
-import Layout from '../components/Layout';
+import Layout from "../components/Layout";
 // import Feed from '../components/Feed';
 // import Suggestions from '../components/Suggestions';
 // import { openDB } from '../lib/openDB';
@@ -6,9 +6,7 @@ import Layout from '../components/Layout';
 function Index({ posts }) {
   return (
     <Layout>
-      MESTA SMART
-      {/* <Feed posts={posts}></Feed>
-      <Suggestions></Suggestions> */}
+      <h1>Dashboard</h1>
     </Layout>
   );
 }
