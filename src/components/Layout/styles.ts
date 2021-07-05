@@ -22,9 +22,6 @@ export const ContentContainer = styled.div`
   padding: 0px 25px;
   display: flex;
   flex-direction: column;
-
-  //max-width: 1194px;
-  //background: blue;
   height: calc(100vh - 70px); 
   overflow-y: scroll;
 

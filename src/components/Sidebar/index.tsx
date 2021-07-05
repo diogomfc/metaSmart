@@ -9,7 +9,6 @@ import {
   InfoContainerTime,
   Links,
 } from "./styles";
-//import User from '../User';
 
 function Sidebar() {
   return (

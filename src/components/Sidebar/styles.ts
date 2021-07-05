@@ -6,7 +6,6 @@ export const Container = styled.div`
   left: 0;
   bottom: 0;
   width: 250px;
-  //padding-top: 10px;
   background: ${props => props.theme.colors.secondary};
 `;
 export const MenuItem = styled.div`
@@ -46,11 +45,8 @@ export const Following = styled.div`
 `;
 
 export const FollowingHeader = styled.div`
-  //font-weight: 400;
-  //font-size: 16px;
   line-height: 22px;
   color: rgba(22, 24, 35, 0.5);
-  //height: 8px;
   padding-left: 16px;
   margin-bottom: 10px;
 `;

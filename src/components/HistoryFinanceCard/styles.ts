@@ -59,7 +59,7 @@ export const Container = styled.li`
     > div span {
         font-size: 22px;
         font-weight: 500;
-        //padding-left: 10px;
+      
     }
 `;
 

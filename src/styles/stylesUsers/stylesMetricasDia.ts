@@ -17,7 +17,6 @@ font-size: 14px;
 export const ContainerGeral = styled.div`
     display:flex;
     width:100%;
-    //height:100%;
     justify-content: center;
     flex-direction: row;
     

@@ -56,7 +56,6 @@ export const Content = styled.li`
     > h3 {
         font-size: 15px;
         font-weight: 500;
-        //padding-left: 10px;
     }
 
     >img{

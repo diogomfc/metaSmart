@@ -25,7 +25,6 @@ const Header: React.FC = () => {
     <Container>
       <Content>
         <LogoContainer>
-          {/* <LogoIcon src='/images/logoIcon.svg'></LogoIcon> */}
           <Logo src="/images/LogoSmart.svg"></Logo>
         </LogoContainer>
         <OptionsContainer>
