@@ -7,8 +7,8 @@ export const Container = styled.div`
   right: 0;
   left: 0;
   height: 70px;
-  background: #3E424E;
-  border-bottom: 1px solid #7584A6;
+  background: ${props => props.theme.colors.tertiary}; 
+  border-bottom: 1px solid ${props => props.theme.colors.border}; 
   z-index: 1000;
 `;
 
@@ -18,12 +18,10 @@ export const Content = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  
 `;
 
 export const LogoContainer = styled.div`
   display: block;
-  
 `;
 
 export const LogoIcon = styled.img`
@@ -35,7 +33,6 @@ export const Logo = styled.img`
   margin-left: 14px;
   position: relative;
   top: -2px;
-  
 `;
 
 export const OptionsContainer = styled.div`
@@ -44,10 +41,19 @@ export const OptionsContainer = styled.div`
 `;
 export const ContainerPerfil = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  //align-items: center;
   margin: 10px;
-  color: white;
+  color: ${props => props.theme.colors.white};
 `;
+
+export const UserEmail = styled.span`
+ color: ${props => props.theme.colors.border};
+ font-size: 14px;
+`;
+
+export const UserName = styled.span``;
+
 
 export const Icon = styled.img`
   width: 37px;
@@ -61,20 +67,11 @@ export const Avatar = styled.div`
   cursor: pointer;
 
   > img {
-    width: 60px;
-    height: 60px;
-    display: inline-block;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-feature-settings: 'tnum';
-    position: relative;
-    overflow: hidden;
-    color: #fff;
-    white-space: nowrap;
-    text-align: center;
+    width: 50px;
+    height: 50px;
     vertical-align: middle;
-    line-height: 32px;
     border-radius: 50%;
+    border: 1px solid ${props => props.theme.colors.border};
+    box-shadow: 0px 0px 5px 0px ${props => props.theme.colors.border};
   }
 `;

@@ -7,26 +7,29 @@ export const Container = styled.div`
   bottom: 0;
   width: 250px;
   //padding-top: 10px;
-  background: #353A49;
+  background: ${props => props.theme.colors.secondary};
 `;
 export const MenuItem = styled.div`
   cursor: pointer;
-  color: #E6E6E6;
+  color: ${props => props.theme.colors.gray};
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 0 12px;
   box-sizing: border-box;
   height: 40px;
-  :hover {
-    background: #232835;
+
+  transition: opacity .3s;
+  &:hover {
+    background: ${props => props.theme.colors.primary};
+    opacity: .7;
   }
   > span {
     font-weight:200;
     margin-left: 13px;
     font-size: 20px;
     line-height: 60px;
-    color: #E6E6E6;
+    color: ${props => props.theme.colors.gray};
   }
 
   > img {

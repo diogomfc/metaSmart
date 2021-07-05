@@ -17,31 +17,31 @@ function Sidebar() {
       <InfoContainerTime>Patronum</InfoContainerTime>
       <MenuItem>
         <img src="/images/IconDashborard.svg"></img>
-        <Link href="/">
-          <span>Dashboard</span>
+        <Link href="/Admin/metricasDiaTime">
+          <span>Dashboard time</span>
         </Link>
       </MenuItem>
       <MenuItem>
         <img src="/images/IconMetricasDia.svg"></img>
-        <Link href="/Cards/metricasDia">
+        <Link href="/Users/metricasDia">
           <span>Métricas dia</span>
         </Link>
       </MenuItem>
       <MenuItem>
         <img src="/images/IconMetricasMes.svg"></img>
-        <Link href="/contato">
+        <Link href="/Users/metricasMes">
           <span>Métricas mês</span>
         </Link>
       </MenuItem>
       <MenuItem>
         <img src="/images/IconNovoRegistro.svg"></img>
-        <Link href="/sobre">
+        <Link href="/Users/novoRegistro">
           <span>Novo registro</span>
         </Link>
       </MenuItem>
       <MenuItem>
         <img src="/images/IconRelatorio.svg"></img>
-        <Link href="/sobre">
+        <Link href="/Users/relatorios">
           <span>Relatórios</span>
         </Link>
       </MenuItem>
@@ -53,14 +53,6 @@ function Sidebar() {
       </MenuItem>
       <Following>
         <FollowingHeader></FollowingHeader>
-        {/* <User
-          user={{
-            name: 'Will Smith',
-            username: 'willsmith',
-            avatar:
-              'https://p16-amd-va.tiktokcdn.com/img/musically-maliva-obj/1646315618666501~c5_100x100.jpeg',
-          }}
-        ></User> */}
       </Following>
       <InfoContainer>
         <Links>

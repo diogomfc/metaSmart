@@ -1,14 +1,14 @@
 import { GetStaticProps } from "next";
 import React, { useMemo, useState } from "react";
 
-import Layout from "../components/Layout";
-import ContentHeader from "../components/ContentHeader";
-import SelectInput from "../components/SelectInput";
-import HistoryCard from "../components/HistoryCard";
+import Layout from "../../components/Layout";
+import ContentHeader from "../../components/ContentHeader";
+import SelectInput from "../../components/SelectInput";
+import HistoryCard from "../../components/HistoryCard";
 
-import ConexaoDb from "../utils/conexaoDB";
+import ConexaoDb from "../../utils/conexaoDB";
 
-import formatDate from "../utils/formatDate";
+import formatDate from "../../utils/formatDate";
 
 import {
   Container,
@@ -20,7 +20,7 @@ import {
   ConnectBaseDados,
   ListaClientes,
   TagIconListaClientes,
-} from "../styles/stylesUsers/stylesMetricasDia";
+} from "../../styles/stylesUsers/stylesMetricasDia";
 
 interface IdbMetricasTitle {
   title: string;

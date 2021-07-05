@@ -1,35 +1,46 @@
+import React, { useMemo } from "react";
+
+import emojis from "../../utils/emojis";
+
 import {
   Container,
   Content,
   LogoContainer,
-  LogoIcon,
+  UserEmail,
+  UserName,
   Logo,
   OptionsContainer,
   ContainerPerfil,
   Icon,
   Avatar,
-} from './styles';
+} from "./styles";
 
-function Header() {
+const Header: React.FC = () => {
+  const emoji = useMemo(() => {
+    const indice = Math.floor(Math.random() * emojis.length);
+    return emojis[indice];
+  }, []);
+
   return (
     <Container>
       <Content>
         <LogoContainer>
           {/* <LogoIcon src='/images/logoIcon.svg'></LogoIcon> */}
-          <Logo src='/images/LogoSmart.svg'></Logo>
+          <Logo src="/images/LogoSmart.svg"></Logo>
         </LogoContainer>
         <OptionsContainer>
-          <Icon src='/images/uploadIcon.svg'></Icon>
           <Avatar>
-            <img src='https://ca.slack-edge.com/T02CW8PH8-U01MDDAEFU4-fbf8a8626100-48' />
+            <img src="https://ca.slack-edge.com/T02CW8PH8-U01MDDAEFU4-d94cf229da50-192" />
           </Avatar>
           <ContainerPerfil>
-            <span>Diogo Silva</span>
+            <UserName>Olá, Diogo Silva {emoji}</UserName>
+            <UserEmail>diogo.silva@creditas.com</UserEmail>
           </ContainerPerfil>
+          <Icon src="/images/SinoAlerta.svg"></Icon>
         </OptionsContainer>
       </Content>
     </Container>
   );
-}
+};
 
 export default Header;

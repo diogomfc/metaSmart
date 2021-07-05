@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 function Index({ posts }) {
   return (
     <Layout>
-      <h1>Contato</h1>
+      <h1>LOGIN</h1>
     </Layout>
   );
 }
