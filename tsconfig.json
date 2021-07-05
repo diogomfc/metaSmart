@@ -1,3 +1,4 @@
+  
 {
   "compilerOptions": {
     "target": "es5",
@@ -21,13 +22,8 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx",
-    "pages/**/*",
-    "src/**/*",
-    "src/pages/index.tsx", 
-    "src/pages/_document.tsx",
-    "src/pages/_app.tsx"
-  ],
+    "**/*.tsx"
+, "src/pages/index.tsx", "src/pages/_document.tsrc/pages/_app.jspp.tsx"],
   "exclude": [
     "node_modules"
   ]
