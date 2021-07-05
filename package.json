@@ -23,6 +23,7 @@
     "recharts": "^2.0.9",
     "sass": "^1.32.13",
     "styled-components": "^5.3.0",
+    "surge": "^0.23.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
