@@ -3,7 +3,7 @@ import React, { useMemo, useState, useEffect } from "react";
 
 import Layout from "../../components/Layout";
 import ContentHeader from "../../components/ContentHeader";
-import SelectInput from "../../components/SelectInput";
+import SelectInput from "../../components/select";
 
 import formatCurrency from "../../utils/formatCurrency";
 import formatDate from "../../utils/formatDate";

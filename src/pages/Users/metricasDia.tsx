@@ -3,7 +3,7 @@ import React, { useMemo, useState } from "react";
 
 import Layout from "../../components/Layout";
 import ContentHeader from "../../components/ContentHeader";
-import SelectInput from "../../components/SelectInput";
+import SelectInput from "../../components/select";
 import HistoryCard from "../../components/HistoryCard";
 
 import ConexaoDb from "../../utils/conexaoDB";

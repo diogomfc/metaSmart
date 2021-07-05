@@ -7,7 +7,7 @@ import {
 } from "../../styles/stylesUsers/styledUsersNovoRegistro";
 
 import ContentHeader from "../../components/ContentHeader";
-import SelectInput from "../../components/SelectInput";
+import SelectInput from "../../components/select";
 import Layout from "../../components/Layout";
 import HistoryFinanceCard from "../../components/HistoryFinanceCard";
 

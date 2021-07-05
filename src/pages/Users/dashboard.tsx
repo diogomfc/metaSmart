@@ -3,7 +3,7 @@ import React from "react";
 import { Container } from "../../styles/stylesUsers/styledDasboard";
 
 import ContentHeader from "../../components/ContentHeader";
-import SelectInput from "../../components/SelectInput";
+import SelectInput from "../../components/select";
 
 const Dashboard: React.FC = () => {
   const options = [
