@@ -15,6 +15,11 @@ import {
   Avatar,
   ContainerGeral,
   AvatarColor,
+  ContainerCardResumoTime,
+  CardResumoTime,
+  OptionsContainerResumoTime,
+  AvatarTL,
+  AvatarColorTL,
 } from "../../styles/stylesAdmin/stylesMetricasDiaTime";
 
 //INTERFACES TIPAGEM
@@ -217,6 +222,39 @@ function ListaConsultores(props: IdbMetricasConsultoresAutoProps) {
     { value: "12", label: "Dezembro" },
   ];
 
+  const CardResumo = (
+    <ContainerCardResumoTime>
+      <OptionsContainerResumoTime>
+        <AvatarTL>
+          <AvatarColorTL color="#2ECC71">
+            <img src="https://ca.slack-edge.com/T02CW8PH8-UER082JS1-4e2ffb8df7c4-512" />
+          </AvatarColorTL>
+        </AvatarTL>
+        <span>Glessia - TL</span>
+      </OptionsContainerResumoTime>
+      <CardResumoTime color="#2ECC71">
+        <span>Produtividade:</span>
+        <h1>25</h1>
+        <small>Meta: 10 </small>
+      </CardResumoTime>
+      <CardResumoTime color="#2ECC71">
+        <span>Vistorias:</span>
+        <h1>30</h1>
+        <small>Meta: 10 </small>
+      </CardResumoTime>
+      <CardResumoTime color="#2ECC71">
+        <span>Pasta Completa:</span>
+        <h1>30</h1>
+        <small>Meta: 10 </small>
+      </CardResumoTime>
+      <CardResumoTime color="#2ECC71">
+        <span>%Atingimento:</span>
+        <h1>30</h1>
+        <small>Meta: 10 </small>
+      </CardResumoTime>
+    </ContainerCardResumoTime>
+  );
+
   const MetricaDiaConsultores = ResponseDb.map((item) => (
     <ContainerGeral>
       <ul>
@@ -284,6 +322,7 @@ function ListaConsultores(props: IdbMetricasConsultoresAutoProps) {
           defaultValue={monthSelected}
         />
       </ContentHeader>
+      {CardResumo}
       {MetricaDiaConsultores}
     </Layout>
   );

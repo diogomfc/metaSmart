@@ -239,6 +239,7 @@ function Cards(props: IdbMetricasConsultoresAutoProps) {
   ];
 
   const nomeConsultoresAuto = [
+    { value: " ", label: "Selecionar consultor" },
     { value: "Agatha Mayara", label: "Agatha Mayara" },
     { value: "Brahiam Calda", label: "Brahiam Calda" },
     { value: "Camila Almeida", label: "Camila Almeida" },
@@ -269,8 +270,6 @@ function Cards(props: IdbMetricasConsultoresAutoProps) {
     { value: "Zeus", label: "Zeus" },
     { value: "Sonserina ", label: "Sonserina" },
   ];
-
-  //const tagIconPasta = String(img src="/images/IconPasta.svg");
 
   const MetricaDiaConsultores = ResponseDb.map((item) => (
     <ContainerGeral>
@@ -321,7 +320,8 @@ function Cards(props: IdbMetricasConsultoresAutoProps) {
   return (
     <Layout>
       <ConnectBaseDados>Base de dados: {props.title}</ConnectBaseDados>
-      <ContentHeader title="Métricas por dia">
+      <ContentHeader title="Métricas Diárias">
+        <small>Filtrar:</small>
         <SelectInput
           options={relacaoTime}
           onChange={() => {}}
@@ -332,6 +332,7 @@ function Cards(props: IdbMetricasConsultoresAutoProps) {
           onChange={(e) => setConsultorSelected(e.target.value)}
           defaultValue={diaSelected}
         />
+        <small>Data :</small>
         <SelectInput
           options={dias}
           onChange={(e) => setDiaSelected(e.target.value)}
@@ -354,6 +355,7 @@ function Cards(props: IdbMetricasConsultoresAutoProps) {
             nomeCliente={item.Cliente}
             description={item.Originacao}
             status={item.Status}
+            linkMDO="https://www.google.com"
           />
         ))}
       </div>

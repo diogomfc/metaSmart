@@ -9,6 +9,7 @@ interface IHistoryCard {
   nomeCliente: string;
   description: string;
   status: string;
+  linkMDO: string;
 }
 
 const HistoryCard: React.FC<IHistoryCard> = ({
@@ -18,13 +19,18 @@ const HistoryCard: React.FC<IHistoryCard> = ({
   nomeCliente,
   description,
   status,
+  linkMDO,
 }) => (
   <Container>
     <Content>
       <Tag color={tagColor} />
-      <img src={imgTag} />
+      <a href={linkMDO} target="_blank">
+        <img src={imgTag} />
+      </a>
       <span>{tagIcon}</span>
-      <small>{nomeCliente}</small>
+      <a href={linkMDO} target="_blank">
+        <small>{nomeCliente}</small>
+      </a>
       <small>{description}</small>
       <h3>{status}</h3>
     </Content>

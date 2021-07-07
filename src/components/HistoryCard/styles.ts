@@ -51,18 +51,30 @@ export const Content = styled.li`
         font-weight: 500;
         position: absolute;
         left: 60px;
+        color: ${props => props.theme.colors.border};
     }
 
     > h3 {
         font-size: 15px;
         font-weight: 500;
+        color: ${props => props.theme.colors.border};
     }
 
-    >img{
+   > a {
+      text-decoration: none;
+      font-size:15px;
+      color: ${props => props.theme.colors.border};
+    img{
      height: 30px;
      width: 30px;
      padding-right: 10px;
    }
+   }
+
+   > small {
+        color: ${props => props.theme.colors.border};
+    }
+
 
 
 `;

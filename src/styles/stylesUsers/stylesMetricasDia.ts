@@ -1,12 +1,20 @@
 import styled, {keyframes} from 'styled-components';
-
 interface IStatusColorProps {
     color: string;
   }
-
-export const ConnectBaseDados = styled.small`
-color: ${props => props.theme.colors.secondary};
-font-size: 12px;
+  
+const animate = keyframes`
+0%{
+    transform: translateX(100px);
+    opacity: 0;
+}
+50%{     
+    opacity: .3;
+}
+100%{
+    transform: translateX(0px);
+    opacity: 1;
+};
 `;
 
 export const ListaClientes = styled.small`
@@ -18,22 +26,7 @@ export const ContainerGeral = styled.div`
     display:flex;
     width:100%;
     justify-content: center;
-    flex-direction: row;
-    
-`;
-
-const animate = keyframes`
-    0%{
-        transform: translateX(100px);
-        opacity: 0;
-    }
-    50%{     
-        opacity: .3;
-    }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    };
+    flex-direction: row; 
 `;
 
 export const Container = styled.div<IStatusColorProps>`
@@ -101,6 +94,12 @@ export const Container = styled.div<IStatusColorProps>`
     };
 
 `;
+
+export const ConnectBaseDados = styled.small`
+color: ${props => props.theme.colors.secondary};
+font-size: 12px;
+`;
+
 
 export const ContainerPuxadasCarterizadas = styled.div<IStatusColorProps>`
     display: flex;
