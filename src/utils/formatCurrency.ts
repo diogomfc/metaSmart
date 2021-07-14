@@ -3,7 +3,8 @@ const formatCurrency = (current: number): string => {
         'pt-br', 
         {
             style: 'currency', 
-            currency: 'BRL'
+            currency: 'BRL',
+            minimumFractionDigits: 2
         });
 };
 

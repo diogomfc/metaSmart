@@ -1,5 +1,6 @@
 import { GetStaticProps } from "next";
 import React, { useMemo, useState } from "react";
+import { v4 as uuid } from "uuid";
 
 import Layout from "../../components/Layout";
 import ContentHeader from "../../components/ContentHeader";
@@ -7,8 +8,8 @@ import SelectInput from "../../components/select";
 import HistoryCard from "../../components/HistoryCard";
 
 import ConexaoDb from "../../utils/conexaoDB";
-
 import formatDate from "../../utils/formatDate";
+import listOfMonths from "../../utils/months";
 
 import {
   Container,
@@ -91,6 +92,7 @@ function Cards(props: IdbMetricasConsultoresAutoProps) {
 
   const ListaCadastroConsultores = HistoricoClienteDia.map((item) => {
     return {
+      id: uuid(),
       Consultores: item.Consultores,
       Cliente: item.Cliente,
       Status: item.Status,
@@ -113,8 +115,8 @@ function Cards(props: IdbMetricasConsultoresAutoProps) {
     String(new Date().getMonth() + 1)
   );
   //Ano
-  const [yearSelected, setYearSelected] = useState<number>(
-    new Date().getFullYear()
+  const [yearSelected, setYearSelected] = useState<string>(
+    String(new Date().getFullYear())
   );
   //Dia
   const [diaSelected, setDiaSelected] = useState<string>(
@@ -128,7 +130,7 @@ function Cards(props: IdbMetricasConsultoresAutoProps) {
     const date = new Date(item.Data);
     const dia = String(date.getDate());
     const month = String(date.getMonth() + 1);
-    const year = date.getFullYear();
+    const year = String(date.getFullYear());
 
     const consultorNome = item.Consultores;
 
@@ -150,7 +152,7 @@ function Cards(props: IdbMetricasConsultoresAutoProps) {
     const date = new Date(item.Data);
     const dia = String(date.getDate());
     const month = String(date.getMonth() + 1);
-    const year = date.getFullYear();
+    const year = String(date.getFullYear());
 
     const consultorNome = item.Consultores;
 
@@ -162,10 +164,9 @@ function Cards(props: IdbMetricasConsultoresAutoProps) {
     );
   });
 
-  console.log(filteredHistoricoClientes);
-
   const ResponseDb = filteredData.map((item) => {
     return {
+      id: uuid(),
       Consultores: item.Consultores,
       Puxadas: item.Puxadas,
       Carteirizadas: item.Carteirizadas,
@@ -238,6 +239,14 @@ function Cards(props: IdbMetricasConsultoresAutoProps) {
     { value: "12", label: "Dezembro" },
   ];
 
+  const ano = [
+    { value: "2021", label: "2021" },
+    { value: "2022", label: "2022" },
+    { value: "2023", label: "2023" },
+    { value: "2024", label: "2024" },
+    { value: "2025", label: "2025" },
+  ];
+
   const nomeConsultoresAuto = [
     { value: " ", label: "Selecionar consultor" },
     { value: "Agatha Mayara", label: "Agatha Mayara" },
@@ -271,6 +280,17 @@ function Cards(props: IdbMetricasConsultoresAutoProps) {
     { value: "Sonserina ", label: "Sonserina" },
   ];
 
+  const months = useMemo(() => {
+    return listOfMonths.map((month, index) => {
+      return {
+        value: index + 1,
+        label: month,
+      };
+    });
+  }, []);
+
+  //console.log(ano);
+
   const MetricaDiaConsultores = ResponseDb.map((item) => (
     <ContainerGeral>
       <OptionsContainer>
@@ -300,7 +320,7 @@ function Cards(props: IdbMetricasConsultoresAutoProps) {
       <Container color={item.StatusColorVistoria}>
         <span>Vistoria Realizadas:</span>
         <h1>{item.Vistorias_Realizadas}</h1>
-        <small>Meta: 10</small>
+        <small>Meta: 3</small>
       </Container>
       {/* Card Vistoria Aprovada */}
       <Container color={item.StatusColorPasta}>
@@ -339,9 +359,14 @@ function Cards(props: IdbMetricasConsultoresAutoProps) {
           defaultValue={diaSelected}
         />
         <SelectInput
-          options={mes}
+          options={months}
           onChange={(e) => setMonthSelected(e.target.value)}
           defaultValue={monthSelected}
+        />
+        <SelectInput
+          options={ano}
+          onChange={(e) => setYearSelected(e.target.value)}
+          defaultValue={yearSelected}
         />
       </ContentHeader>
       <div>
@@ -349,13 +374,14 @@ function Cards(props: IdbMetricasConsultoresAutoProps) {
         <ListaClientes>Lista de clientes do dia</ListaClientes>
         {filteredHistoricoClientes.map((item) => (
           <HistoryCard
+            key={item.id}
             tagColor={item.TagCorClientes}
             imgTag={item.TagIconClientes}
             tagIcon={item.Descricao}
             nomeCliente={item.Cliente}
             description={item.Originacao}
             status={item.Status}
-            linkMDO="https://www.google.com"
+            linkMDO={item.obs}
           />
         ))}
       </div>
@@ -363,6 +389,7 @@ function Cards(props: IdbMetricasConsultoresAutoProps) {
   );
 }
 
+//Conexão com a base de dados
 export const getStaticProps: GetStaticProps = async () => {
   let nomeBanco = ConexaoDb;
 

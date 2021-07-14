@@ -222,35 +222,54 @@ function ListaConsultores(props: IdbMetricasConsultoresAutoProps) {
     { value: "12", label: "Dezembro" },
   ];
 
+  const totalProdutividade = ResponseDb.reduce(
+    (acc, p) => acc + Number(p.Carteirizadas),
+    0
+  );
+  const totalVistoria = ResponseDb.reduce(
+    (acc, p) => acc + Number(p.Vistorias_Realizadas),
+    0
+  );
+  const totalPastaC = ResponseDb.reduce(
+    (acc, p) => acc + Number(p.Pastas_Completas),
+    0
+  );
+  const totalAtingimento = ResponseDb.reduce(
+    (acc, p) => acc + (Number(p.Carteirizadas) * 100) / 122,
+    0
+  );
+
   const CardResumo = (
     <ContainerCardResumoTime>
       <OptionsContainerResumoTime>
         <AvatarTL>
-          <AvatarColorTL color="#2ECC71">
+          <AvatarColorTL
+            color={totalAtingimento >= 100 ? "#2ECC71" : "#F84F6B"}
+          >
             <img src="https://ca.slack-edge.com/T02CW8PH8-UER082JS1-4e2ffb8df7c4-512" />
           </AvatarColorTL>
         </AvatarTL>
         <span>Glessia - TL</span>
       </OptionsContainerResumoTime>
-      <CardResumoTime color="#2ECC71">
+      <CardResumoTime color={totalProdutividade >= 90 ? "#2ECC71" : "#F84F6B"}>
         <span>Produtividade:</span>
-        <h1>25</h1>
-        <small>Meta: 10 </small>
+        <h1>{totalProdutividade}</h1>
+        <small>Meta: 90 </small>
       </CardResumoTime>
-      <CardResumoTime color="#2ECC71">
+      <CardResumoTime color={totalVistoria >= 16 ? "#2ECC71" : "#F84F6B"}>
         <span>Vistorias:</span>
-        <h1>30</h1>
-        <small>Meta: 10 </small>
+        <h1>{totalVistoria}</h1>
+        <small>Meta: 16 </small>
       </CardResumoTime>
-      <CardResumoTime color="#2ECC71">
+      <CardResumoTime color={totalPastaC >= 16 ? "#2ECC71" : "#F84F6B"}>
         <span>Pasta Completa:</span>
-        <h1>30</h1>
-        <small>Meta: 10 </small>
+        <h1>{totalPastaC}</h1>
+        <small>Meta: 16 </small>
       </CardResumoTime>
-      <CardResumoTime color="#2ECC71">
+      <CardResumoTime color={totalAtingimento >= 100 ? "#2ECC71" : "#F84F6B"}>
         <span>%Atingimento:</span>
-        <h1>30</h1>
-        <small>Meta: 10 </small>
+        <h1>{Math.round(totalAtingimento)}%</h1>
+        <small>Meta: 100% </small>
       </CardResumoTime>
     </ContainerCardResumoTime>
   );

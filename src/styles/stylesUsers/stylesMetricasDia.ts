@@ -148,7 +148,7 @@ export const ContainerPuxadasCarterizadas = styled.div<IStatusColorProps>`
 `;
 
 export const OptionsContainer = styled.div`
-    width: 15%;
+    //width: 15%;
     height: 140px;
 
     padding: 10px;
@@ -157,8 +157,6 @@ export const OptionsContainer = styled.div`
     align-items: center;
     text-align: center;
     flex-direction: column;
-
-    
 
     > span{
         width: 100%;

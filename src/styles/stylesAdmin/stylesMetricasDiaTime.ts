@@ -20,7 +20,7 @@ const animate = keyframes`
 
 export const ContainerCardResumoTime = styled.div`
 display:flex;
-padding-left: 65px;
+padding-left: 15px;
 //width:90%;
 justify-content: center;
 flex-direction: row;
@@ -50,7 +50,7 @@ animation: ${animate} .5s;
   display: flex;
   align-items: center;
   position: absolute;
-  font-size: 60px;
+  font-size: 50px;
   color: ${props => props.color};
   top: 0;
   bottom: 0;
