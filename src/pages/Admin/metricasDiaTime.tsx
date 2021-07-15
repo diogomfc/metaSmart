@@ -1,10 +1,12 @@
 import { GetStaticProps } from "next";
 import React, { useMemo, useState, useEffect } from "react";
+import { v4 as uuid } from "uuid";
 
 import Layout from "../../components/Layout";
 import ContentHeader from "../../components/ContentHeader";
 import SelectInput from "../../components/select";
 
+import ConexaoDb from "../../utils/conexaoDB";
 import formatCurrency from "../../utils/formatCurrency";
 import formatDate from "../../utils/formatDate";
 
@@ -348,12 +350,14 @@ function ListaConsultores(props: IdbMetricasConsultoresAutoProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
+  let ApiDb = ConexaoDb;
+
   const {
     guiaCadastroConsultores,
     guiaMetricaDia,
     dbMetricasConsultoresAuto,
     title,
-  } = await fetch("https://ideia-unica-pi-sepia.vercel.app/api/db1")
+  } = await fetch(ApiDb)
     .then((res) => {
       if (res.ok) return res.json();
     })
